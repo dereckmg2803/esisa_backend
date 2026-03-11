@@ -113,206 +113,181 @@ CATEGORIES: List[Category] = [
 ]
 
 PRODUCTS: List[Product] = [
-    # ROPA
-    Product(
-        id="1",
-        slug="camisa-fiesta-caribena",
-        name_es="Camisa Fiesta Caribeña",
-        name_en="Caribbean Party Shirt",
-        description_es="Camisa colorida inspirada en el Caribe colombiano, con mariposas, sombrero vueltiao, marimondas y símbolos típicos. Perfecta para celebrar nuestra cultura.",
-        description_en="Colorful shirt inspired by the Colombian Caribbean, with butterflies, vueltiao hat, marimondas and typical symbols. Perfect to celebrate our culture.",
-        price=65.00,
-        original_price=80.00,
-        category="ropa",
-        images=["https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600"],
-        sizes=["S", "M", "L", "XL"],
-        colors=["Multicolor"],
-        badge="Nuevo",
-        featured=True
-    ),
-    Product(
-        id="2",
-        slug="blusa-mariposa-tropical",
-        name_es="Blusa Mariposa Tropical",
-        name_en="Tropical Butterfly Blouse",
-        description_es="Blusa con estampado de mariposas y flores tropicales. Diseño exclusivo que captura la esencia del Caribe.",
-        description_en="Blouse with butterfly and tropical flower print. Exclusive design that captures the essence of the Caribbean.",
-        price=55.00,
-        original_price=70.00,
-        category="ropa",
-        images=["https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600"],
-        sizes=["XS", "S", "M", "L"],
-        colors=["Rosa", "Amarillo"],
-        badge="Oferta",
-        featured=True
-    ),
-    Product(
-        id="3",
-        slug="camiseta-eche-costeño",
-        name_es="Camiseta 'Eche' Costeño",
-        name_en="'Eche' Coastal T-Shirt",
-        description_es="Camiseta con la expresión costeña 'Eche'. Algodón 100% con diseño artístico que celebra el lenguaje caribeño.",
-        description_en="T-shirt with the coastal expression 'Eche'. 100% cotton with artistic design celebrating Caribbean language.",
-        price=35.00,
-        category="ropa",
-        images=["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"],
-        sizes=["S", "M", "L", "XL", "XXL"],
-        colors=["Blanco", "Negro", "Amarillo"],
-        featured=False
-    ),
-    Product(
-        id="4",
-        slug="vestido-carnaval-barranquilla",
-        name_es="Vestido Carnaval de Barranquilla",
-        name_en="Barranquilla Carnival Dress",
-        description_es="Vestido vibrante inspirado en el Carnaval de Barranquilla con estampados de marimondas y colores festivos.",
-        description_en="Vibrant dress inspired by Barranquilla Carnival with marimonda prints and festive colors.",
-        price=95.00,
-        original_price=120.00,
-        category="ropa",
-        images=["https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600"],
-        sizes=["XS", "S", "M", "L"],
-        colors=["Multicolor"],
-        badge="Destacado",
-        featured=True
-    ),
-    # ACCESORIOS
-    Product(
-        id="5",
-        slug="turbante-colombiano",
-        name_es="Turbante Colombiano",
-        name_en="Colombian Turban",
-        description_es="Turbante tradicional con patrones coloridos. Símbolo de orgullo y herencia afrocaribeña.",
-        description_en="Traditional turban with colorful patterns. Symbol of pride and Afro-Caribbean heritage.",
-        price=45.00,
-        original_price=60.00,
-        category="accesorios",
-        images=["https://images.unsplash.com/photo-1589810635657-232948472d98?w=600"],
-        colors=["Multicolor", "Rojo/Amarillo", "Verde/Dorado"],
-        badge="Popular",
-        featured=True
-    ),
-    Product(
-        id="6",
-        slug="aretes-guacamaya",
-        name_es="Aretes Guacamaya",
-        name_en="Macaw Earrings",
-        description_es="Aretes artesanales con forma de guacamaya. Hechos a mano con materiales naturales.",
-        description_en="Handcrafted macaw-shaped earrings. Handmade with natural materials.",
-        price=28.00,
-        category="accesorios",
-        images=["https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600"],
-        colors=["Rojo/Azul", "Verde/Amarillo"],
-        featured=False
-    ),
-    Product(
-        id="7",
-        slug="collar-bandera-colombia",
-        name_es="Collar Bandera Colombia",
-        name_en="Colombia Flag Necklace",
-        description_es="Collar con los colores de la bandera colombiana. Orgullo patrio en cada detalle.",
-        description_en="Necklace with Colombian flag colors. National pride in every detail.",
-        price=32.00,
-        category="accesorios",
-        images=["https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600"],
-        colors=["Amarillo/Azul/Rojo"],
-        featured=False
-    ),
-    # BOLSOS
-    Product(
-        id="8",
-        slug="bolso-artesanal-wayuu",
-        name_es="Bolso Artesanal Wayuu",
-        name_en="Wayuu Handcrafted Bag",
-        description_es="Mochila wayuu tejida a mano por artesanas de La Guajira. Cada pieza es única con patrones tradicionales.",
-        description_en="Wayuu backpack hand-woven by artisans from La Guajira. Each piece is unique with traditional patterns.",
-        price=120.00,
-        original_price=150.00,
-        category="bolsos",
-        images=["https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600"],
-        colors=["Multicolor"],
-        badge="Artesanal",
-        featured=True
-    ),
-    Product(
-        id="9",
-        slug="bolso-bandera-tricolor",
-        name_es="Bolso Bandera Tricolor",
-        name_en="Tricolor Flag Bag",
-        description_es="Bolso con diseño de la bandera de Colombia. Perfecto para llevar tu orgullo patrio a todas partes.",
-        description_en="Bag with Colombian flag design. Perfect to carry your national pride everywhere.",
-        price=75.00,
-        original_price=95.00,
-        category="bolsos",
-        images=["https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600"],
-        colors=["Amarillo/Azul/Rojo"],
-        badge="Nuevo",
-        featured=True
-    ),
-    Product(
-        id="10",
-        slug="morral-caribe",
-        name_es="Morral del Caribe",
-        name_en="Caribbean Backpack",
-        description_es="Morral con estampados de flores tropicales y elementos del Caribe colombiano.",
-        description_en="Backpack with tropical flower prints and Colombian Caribbean elements.",
-        price=85.00,
-        category="bolsos",
-        images=["https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=600"],
-        colors=["Multicolor"],
-        featured=False
-    ),
-    # LIBROS
-    Product(
-        id="11",
-        slug="cien-anos-de-soledad",
-        name_es="Cien Años de Soledad",
-        name_en="One Hundred Years of Solitude",
-        description_es="La obra maestra de Gabriel García Márquez. Edición especial con ilustraciones inspiradas en Macondo.",
-        description_en="Gabriel García Márquez's masterpiece. Special edition with illustrations inspired by Macondo.",
-        price=38.00,
-        original_price=45.00,
-        category="libros",
-        images=["https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600"],
-        badge="Clásico",
-        featured=True
-    ),
-    Product(
-        id="12",
-        slug="el-amor-en-tiempos-del-colera",
-        name_es="El Amor en los Tiempos del Cólera",
-        name_en="Love in the Time of Cholera",
-        description_es="Una historia de amor que trasciende el tiempo, ambientada en el Caribe colombiano.",
-        description_en="A love story that transcends time, set in the Colombian Caribbean.",
-        price=35.00,
-        category="libros",
-        images=["https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600"],
-        featured=True
-    ),
-    Product(
-        id="13",
-        slug="cronicas-de-una-muerte-anunciada",
-        name_es="Crónica de una Muerte Anunciada",
-        name_en="Chronicle of a Death Foretold",
-        description_es="Novela corta que mezcla periodismo y ficción. Una joya de la literatura latinoamericana.",
-        description_en="Short novel that mixes journalism and fiction. A gem of Latin American literature.",
-        price=28.00,
-        category="libros",
-        images=["https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600"],
-        featured=False
-    ),
-    Product(
-        id="14",
-        slug="el-coronel-no-tiene-quien-le-escriba",
-        name_es="El Coronel No Tiene Quien Le Escriba",
-        name_en="No One Writes to the Colonel",
-        description_es="Una de las novelas más conmovedoras de García Márquez sobre la espera y la dignidad.",
-        description_en="One of García Márquez's most moving novels about waiting and dignity.",
-        price=25.00,
-        category="libros",
-        images=["https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600"],
-        featured=False
-    ),
+   # ===== NUEVOS PRODUCTOS =====
+
+Product(
+    id="1",
+    slug="bolso-artesanal-bandera-colombiana",
+    name_es="Bolso Artesanal Bandera Colombiana",
+    name_en="Colombian Flag Handcrafted Bag",
+    description_es="Bolso artesanal inspirado en los colores de la bandera colombiana. Hecho a mano con materiales resistentes.",
+    description_en="Handcrafted bag inspired by the colors of the Colombian flag. Handmade with durable materials.",
+    price=85.00,
+    category="bolsos",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/bolso-artesanal-bandera-colombiana.png"],
+    colors=["Amarillo/Azul/Rojo"],
+    featured=True
+),
+
+Product(
+    id="2",
+    slug="camisa-marimonda",
+    name_es="Camisa Marimonda",
+    name_en="Marimonda Shirt",
+    description_es="Camisa inspirada en el personaje tradicional del Carnaval de Barranquilla: la marimonda.",
+    description_en="Shirt inspired by the traditional Barranquilla Carnival character: the marimonda.",
+    price=65.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/camisa-marimonda.jpg"],
+    sizes=["S","M","L","XL"],
+    colors=["Multicolor"],
+    featured=True
+),
+
+Product(
+    id="3",
+    slug="camisa-roja-toros",
+    name_es="Camisa Roja Toros",
+    name_en="Red Bulls Shirt",
+    description_es="Camisa roja con ilustraciones de toros inspiradas en la cultura festiva del Caribe colombiano.",
+    description_en="Red shirt with bull illustrations inspired by the festive culture of the Colombian Caribbean.",
+    price=62.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/camisa-roja-toros.jpg"],
+    sizes=["S","M","L","XL"],
+    colors=["Rojo"],
+    featured=False
+),
+
+Product(
+    id="4",
+    slug="camisa-sombrero-vueltiao",
+    name_es="Camisa Sombrero Vueltiao",
+    name_en="Vueltiao Hat Shirt",
+    description_es="Camisa con estampado del tradicional sombrero vueltiao, símbolo del Caribe colombiano.",
+    description_en="Shirt with print of the traditional vueltiao hat, symbol of the Colombian Caribbean.",
+    price=64.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/camisa-sombrerovolteados.jpg"],
+    sizes=["S","M","L","XL"],
+    colors=["Blanco/Negro"],
+    featured=True
+),
+
+Product(
+    id="5",
+    slug="camiseta-amarilla-jergas-caribenas",
+    name_es="Camiseta Amarilla Jergas Caribeñas",
+    name_en="Yellow Caribbean Slang T-Shirt",
+    description_es="Camiseta amarilla con frases y jergas típicas del Caribe colombiano.",
+    description_en="Yellow t-shirt with phrases and slang typical of the Colombian Caribbean.",
+    price=38.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/camiseta-amarilla-jergas-caribenas.jpg"],
+    sizes=["S","M","L","XL"],
+    colors=["Amarillo"],
+    featured=False
+),
+
+Product(
+    id="6",
+    slug="camiseta-blanca-marimondas-flores",
+    name_es="Camiseta Blanca Marimondas y Flores",
+    name_en="White Marimondas and Flowers T-Shirt",
+    description_es="Camiseta blanca con ilustraciones de marimondas y flores tropicales.",
+    description_en="White t-shirt with marimondas and tropical flower illustrations.",
+    price=40.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/camiseta-blanca-marimondas-flores.jpg"],
+    sizes=["S","M","L","XL"],
+    colors=["Blanco"],
+    featured=True
+),
+
+Product(
+    id="7",
+    slug="collar-flor-amarilla-roja",
+    name_es="Collar Flor Amarilla y Roja",
+    name_en="Yellow and Red Flower Necklace",
+    description_es="Collar artesanal con flor en tonos amarillo y rojo inspirado en la naturaleza tropical.",
+    description_en="Handcrafted necklace with yellow and red flower inspired by tropical nature.",
+    price=26.00,
+    category="accesorios",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/collar-flor-amarilla-roja.png"],
+    colors=["Amarillo/Rojo"],
+    featured=False
+),
+
+Product(
+    id="8",
+    slug="libro-hasta-agosto",
+    name_es="En Agosto Nos Vemos",
+    name_en="Until August",
+    description_es="Obra póstuma de Gabriel García Márquez publicada recientemente.",
+    description_en="Posthumous work by Gabriel García Márquez recently published.",
+    price=42.00,
+    category="libros",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/libro-gabriel-garcia-marquez-hasta-agosto.png"],
+    featured=True
+),
+
+Product(
+    id="9",
+    slug="manilla-bandera-colombia",
+    name_es="Manilla Bandera Colombia",
+    name_en="Colombia Flag Bracelet",
+    description_es="Manilla artesanal con los colores de la bandera colombiana.",
+    description_en="Handcrafted bracelet with the colors of the Colombian flag.",
+    price=15.00,
+    category="accesorios",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/manilla-bandera-colombia.png"],
+    colors=["Amarillo/Azul/Rojo"],
+    featured=False
+),
+
+Product(
+    id="10",
+    slug="top-mujer-flores",
+    name_es="Top Mujer Flores Tropicales",
+    name_en="Tropical Flower Women's Top",
+    description_es="Top femenino con estampado de flores tropicales inspirado en el Caribe colombiano.",
+    description_en="Women's top with tropical flower print inspired by the Colombian Caribbean.",
+    price=48.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/top-mujer-flores.jpg"],
+    sizes=["XS","S","M","L"],
+    colors=["Multicolor"],
+    featured=True
+),
+
+Product(
+    id="11",
+    slug="turbante-blanco-verde",
+    name_es="Turbante Blanco y Verde",
+    name_en="White and Green Turban",
+    description_es="Elegante turbante en tonos blanco y verde, tejido a mano con algodón de alta calidad.",
+    description_en="Elegant turban in white and green tones, hand-woven with high-quality cotton.",
+    price=29.99,
+    category="accesorios",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/turbante-blanco-verde.png"],
+    colors=["Blanco/Verde"],
+    featured=True
+),
+
+Product(
+    id="12",
+    slug="vestido-guacamaya-flores",
+    name_es="Vestido Guacamaya y Flores",
+    name_en="Macaw and Flowers Dress",
+    description_es="Vestido vibrante con ilustraciones de guacamayas y flores tropicales.",
+    description_en="Vibrant dress with macaws and tropical flowers illustrations.",
+    price=110.00,
+    category="ropa",
+    images=["https://storage.googleapis.com/gym_bt/wb-pics/vestido-guacamaya-flores.png"],
+    sizes=["XS","S","M","L"],
+    colors=["Multicolor"],
+    featured=True
+),
 ]
 
 # ===== ROUTES =====
