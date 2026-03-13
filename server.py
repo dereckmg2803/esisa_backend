@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
+from send_email import send_contact_emails
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -325,9 +326,10 @@ async def get_product(slug: str):
 
 @api_router.post("/contact", response_model=ContactResponse, status_code=201)
 async def create_contact(contact: ContactRequest):
+
     contact_id = str(uuid.uuid4())
     created_at = datetime.now(timezone.utc).isoformat()
-    
+
     contact_doc = {
         "id": contact_id,
         "name": contact.name,
@@ -337,9 +339,12 @@ async def create_contact(contact: ContactRequest):
         "products": contact.products,
         "created_at": created_at
     }
-    
+
     await db.contacts.insert_one(contact_doc)
-    
+
+    # enviar emails
+    await send_contact_emails(contact)
+
     return ContactResponse(**{k: v for k, v in contact_doc.items() if k != "_id"})
 
 @api_router.get("/featured-products", response_model=List[Product])
