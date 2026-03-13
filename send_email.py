@@ -1,5 +1,5 @@
 from datetime import datetime
-import pytz
+from zoneinfo import ZoneInfo
 import resend
 import os
 
@@ -7,7 +7,7 @@ resend.api_key = os.getenv("RESEND_API_KEY")
 
 async def send_contact_emails(contact):
 
-    timestamp = datetime.now(pytz.timezone("America/Bogota")).strftime("%d/%m/%Y %H:%M")
+    timestamp = datetime.now(ZoneInfo("America/Bogota")).strftime("%d/%m/%Y %H:%M")
 
     # Email al cliente
     resend.Emails.send({
