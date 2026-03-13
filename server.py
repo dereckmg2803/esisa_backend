@@ -281,7 +281,7 @@ Product(
     name_en="Macaw and Flowers Dress",
     description_es="Vestido vibrante con ilustraciones de guacamayas y flores tropicales.",
     description_en="Vibrant dress with macaws and tropical flowers illustrations.",
-    price=110.00,
+    price=250.00,
     category="ropa",
     images=["https://storage.googleapis.com/gym_bt/wb-pics/vestido-guacamaya-flores.png"],
     sizes=["XS","S","M","L"],
